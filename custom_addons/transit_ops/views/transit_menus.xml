@@ -21,6 +21,7 @@
     <menuitem id="menu_transit_driver_management" 
               name="Driver Management" 
               parent="menu_transit_root" 
+              action="action_transit_driver"
               sequence="30"/>
 
     <menuitem id="menu_transit_trip_management" 
