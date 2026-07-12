@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Fleet Manager User -->
+        <record id="user_transit_fleet_manager" model="res.users">
+            <field name="name">Alex Fleet Manager</field>
+            <field name="login">fleetmanager</field>
+            <field name="password">fleetmanager</field>
+            <field name="email">fleetmanager@transitops.example.com</field>
+            <field name="groups_id" eval="[(4, ref('transit_ops.group_transit_fleet_manager'))]"/>
+        </record>
+
+        <!-- Driver User -->
+        <record id="user_transit_driver" model="res.users">
+            <field name="name">David Driver</field>
+            <field name="login">driver</field>
+            <field name="password">driver</field>
+            <field name="email">driver@transitops.example.com</field>
+            <field name="groups_id" eval="[(4, ref('transit_ops.group_transit_driver'))]"/>
+        </record>
+
+        <!-- Safety Officer User -->
+        <record id="user_transit_safety_officer" model="res.users">
+            <field name="name">Sarah Safety Officer</field>
+            <field name="login">safetyofficer</field>
+            <field name="password">safetyofficer</field>
+            <field name="email">safetyofficer@transitops.example.com</field>
+            <field name="groups_id" eval="[(4, ref('transit_ops.group_transit_safety_officer'))]"/>
+        </record>
+
+        <!-- Financial Analyst User -->
+        <record id="user_transit_financial_analyst" model="res.users">
+            <field name="name">Fiona Financial Analyst</field>
+            <field name="login">financialanalyst</field>
+            <field name="password">financialanalyst</field>
+            <field name="email">financialanalyst@transitops.example.com</field>
+            <field name="groups_id" eval="[(4, ref('transit_ops.group_transit_financial_analyst'))]"/>
+        </record>
+    </data>
+</odoo>

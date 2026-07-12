@@ -17,9 +17,12 @@ This is the base custom module for the TransitOps system.
         'base',
     ],
     'data': [
-        # Security files, data, and view files will be added here
+        'security/transit_ops_security.xml',
+        'security/ir.model.access.csv',
+        'views/transit_menus.xml',
     ],
     'demo': [
+        'demo/users_demo.xml',
     ],
     'installable': True,
     'application': True,
