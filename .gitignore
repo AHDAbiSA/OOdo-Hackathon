@@ -1,0 +1,28 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Odoo logs and runtime files
+*.log
+*.pid
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE and OS files
+.vscode/
+.idea/
+.project
+.pydevproject
+.settings/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local configuration overrides
+config/odoo.conf.local
