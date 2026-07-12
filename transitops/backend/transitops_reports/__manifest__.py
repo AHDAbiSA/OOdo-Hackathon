@@ -1,12 +1,12 @@
 {
-    'name': 'TransitOps Expenses',
+    'name': 'TransitOps Reports',
     'version': '17.0.1.0.0',
     'category': 'Fleet',
-    'summary': 'Record operational expenses',
+    'summary': 'Fleet KPIs and analytics dashboard',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/expense_views.xml',
+        '../frontend/transitops_reports/views/report_views.xml',
     ],
     'installable': True,
     'application': True,

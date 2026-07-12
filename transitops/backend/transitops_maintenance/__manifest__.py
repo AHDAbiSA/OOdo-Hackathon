@@ -6,7 +6,7 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/maintenance_views.xml',
+        '../frontend/transitops_maintenance/views/maintenance_views.xml',
     ],
     'installable': True,
     'application': True,
