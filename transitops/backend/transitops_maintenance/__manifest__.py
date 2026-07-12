@@ -4,14 +4,18 @@
     'author': 'Ajeetha',
     'category': 'Fleet',
     'summary': 'Manage vehicle maintenance schedules and records',
-    'depends': ['base'],
+
+    'depends': [
+        'base',
+        'transitops_expenses',
+    ],
+
     'data': [
         'security/ir.model.access.csv',
         'views/transitops_menu.xml',
-        'views/maintenance_views.xml',
     ],
+
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
 }
-

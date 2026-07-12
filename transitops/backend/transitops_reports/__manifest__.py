@@ -4,12 +4,18 @@
     'author': 'Ajeetha',
     'category': 'Fleet',
     'summary': 'Generate analytical reports for TransitOps modules',
-    'depends': ['base'],
+
+    'depends': [
+        'base',
+        'transitops_expenses',
+    ],
+
     'data': [
         'security/ir.model.access.csv',
-        'views/transitops_menu.xml',
         'views/report_views.xml',
+        'views/transitops_menu.xml',
     ],
+
     'installable': True,
     'application': True,
     'license': 'LGPL-3',

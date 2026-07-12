@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-
-    <!-- Reports Menu (under TransitOps root from transitops_expenses) -->
-    <menuitem id="transitops_reports_menu"
-              name="Reports"
-              parent="transitops_expenses.transitops_root_menu"
-              action="action_transitops_report"
-              sequence="40"/>
-
-</odoo>
+<record id="action_transitops_report" model="ir.actions.act_window">
+    <field name="name">Reports</field>
+    <field name="res_model">transitops.report</field>
+    <field name="view_mode">list,form</field>
+</record>
