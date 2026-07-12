@@ -7,7 +7,7 @@ class TransitopsExpense(models.Model):
     _rec_name = "expense_type"
 
     vehicle_id = fields.Many2one(
-        "transitops.vehicle",
+        "transit.vehicle",
         string="Vehicle",
         required=True,
     )

@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_transitops_expense_user,transitops.expense.user,model_transitops_expense,base.group_user,1,1,1,1
-access_transitops_vehicle_user,transitops.vehicle.user,model_transitops_vehicle,base.group_user,1,1,1,1

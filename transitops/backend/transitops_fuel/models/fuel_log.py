@@ -6,7 +6,7 @@ class TransitopsFuelLog(models.Model):
     _description = 'Vehicle Fuel Log'
 
     vehicle_id = fields.Many2one(
-        'transitops.vehicle',
+        'transit.vehicle',
         string='Vehicle',
         required=True,
     )

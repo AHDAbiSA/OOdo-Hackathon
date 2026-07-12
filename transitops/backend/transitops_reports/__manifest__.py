@@ -7,6 +7,7 @@
 
     'depends': [
         'base',
+        'transit_ops',
         'transitops_expenses',
     ],
 

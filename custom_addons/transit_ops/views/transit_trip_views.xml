@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Tree View -->
+    <!-- List View -->
     <record id="view_transit_trip_tree" model="ir.ui.view">
-        <field name="name">transit.trip.tree</field>
+        <field name="name">transit.trip.list</field>
         <field name="model">transit.trip</field>
         <field name="arch" type="xml">
-            <tree string="Trips">
+            <list string="Trips">
                 <field name="trip_reference"/>
                 <field name="source_location"/>
                 <field name="destination_location"/>
@@ -14,7 +14,7 @@
                 <field name="driver_id"/>
                 <field name="planned_distance"/>
                 <field name="trip_status"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -105,7 +105,7 @@
     <record id="action_transit_trip" model="ir.actions.act_window">
         <field name="name">Trip Management</field>
         <field name="res_model">transit.trip</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
 </odoo>

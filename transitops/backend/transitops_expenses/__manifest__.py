@@ -2,7 +2,7 @@
     'name': 'TransitOps Expenses',
     'version': '19.0.1.0.0',
     'author': 'Ajeetha',
-    'depends': ['base'],
+    'depends': ['base', 'transit_ops'],
     'data': [
     'security/ir.model.access.csv',
     'views/expense_views.xml',

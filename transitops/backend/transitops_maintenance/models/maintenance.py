@@ -7,7 +7,7 @@ class TransitopsMaintenance(models.Model):
     _rec_name = 'description'
 
     vehicle_id = fields.Many2one(
-        'transitops.vehicle',
+        'transit.vehicle',
         string='Vehicle',
         required=True,
     )
