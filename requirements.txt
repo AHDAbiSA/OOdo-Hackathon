@@ -1,0 +1,14 @@
+# Python Dependencies for TransitOps (Odoo 18)
+# Ensure you have the standard Odoo 18 dependencies installed.
+# Below are custom dependencies and standard libraries often required for custom development:
+
+psycopg2-binary
+reportlab
+num2words
+phonenumbers
+pytz
+xlwt
+openpyxl
+cryptography
+python-docx
+requests

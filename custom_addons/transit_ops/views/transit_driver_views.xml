@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List (Tree) View -->
+    <record id="view_transit_driver_list" model="ir.ui.view">
+        <field name="name">transit.driver.list</field>
+        <field name="model">transit.driver</field>
+        <field name="arch" type="xml">
+            <list string="Drivers">
+                <field name="driver_name"/>
+                <field name="license_number"/>
+                <field name="license_category"/>
+                <field name="license_expiry"/>
+                <field name="contact_number"/>
+                <field name="safety_score" avg="Average Safety Score"/>
+                <field name="status" widget="badge" 
+                       decoration-success="status == 'available'" 
+                       decoration-info="status == 'on_trip'" 
+                       decoration-warning="status == 'on_leave'" 
+                       decoration-danger="status == 'suspended'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_transit_driver_form" model="ir.ui.view">
+        <field name="name">transit.driver.form</field>
+        <field name="model">transit.driver</field>
+        <field name="arch" type="xml">
+            <form string="Driver">
+                <header>
+                    <field name="status" widget="statusbar" statusbar_visible="available,on_trip,on_leave,suspended" options="{'clickable': '1'}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="driver_name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="driver_name" placeholder="e.g. John Doe"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="License Information">
+                            <field name="license_number" placeholder="e.g. DL-987654321"/>
+                            <field name="license_category"/>
+                            <field name="license_expiry"/>
+                        </group>
+                        <group string="Contact &amp; Performance">
+                            <field name="contact_number" placeholder="e.g. +1 555-0199"/>
+                            <field name="safety_score"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_transit_driver_search" model="ir.ui.view">
+        <field name="name">transit.driver.search</field>
+        <field name="model">transit.driver</field>
+        <field name="arch" type="xml">
+            <search string="Search Drivers">
+                <field name="driver_name" string="Driver" filter_domain="['|', '|', ('driver_name', 'ilike', self), ('license_number', 'ilike', self), ('contact_number', 'ilike', self)]"/>
+                <field name="license_number"/>
+                <field name="contact_number"/>
+                <separator/>
+                <filter string="Available" name="available" domain="[('status', '=', 'available')]"/>
+                <filter string="On Trip" name="on_trip" domain="[('status', '=', 'on_trip')]"/>
+                <filter string="On Leave" name="on_leave" domain="[('status', '=', 'on_leave')]"/>
+                <filter string="Suspended" name="suspended" domain="[('status', '=', 'suspended')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="License Category" name="group_by_category" context="{'group_by': 'license_category'}"/>
+                    <filter string="Status" name="group_by_status" context="{'group_by': 'status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action Window -->
+    <record id="action_transit_driver" model="ir.actions.act_window">
+        <field name="name">Drivers</field>
+        <field name="res_model">transit.driver</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_transit_driver_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Register a new driver
+            </p>
+            <p>
+                Manage your driver profiles, licenses, contact details, and safety performance scores.
+            </p>
+        </field>
+    </record>
+</odoo>
