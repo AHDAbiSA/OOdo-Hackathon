@@ -1,10 +1,11 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_transit_vehicle_manager,transit.vehicle.manager,model_transit_vehicle,transit_ops.group_transit_fleet_manager,1,1,1,1
 access_transit_driver_manager,transit.driver.manager,model_transit_driver,transit_ops.group_transit_fleet_manager,1,1,1,1
+access_transit_trip_manager,transit.trip.manager,model_transit_trip,transit_ops.group_transit_fleet_manager,1,1,1,1
+
 # Access Control List Placeholder for TransitOps models
 # Format:
 # id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 #
 # Examples:
 # access_transit_vehicle_driver,transit.vehicle.driver,model_transit_vehicle,transit_ops.group_transit_driver,1,0,0,0
-

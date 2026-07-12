@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Root Menu: Visible only to authenticated internal users -->
-    <menuitem id="menu_transit_root" 
-              name="TransitOps" 
-              groups="base.group_user" 
-              sequence="10"/>
 
-    <!-- Placeholder Submenus -->
-    <menuitem id="menu_transit_dashboard" 
-              name="Dashboard" 
-              parent="menu_transit_root" 
-              sequence="10"/>
+    <!-- Root Menu -->
+    <menuitem
+        id="menu_transit_root"
+        name="TransitOps"
+        sequence="10"/>
 
-    <menuitem id="menu_transit_vehicle_management" 
-              name="Vehicle Management" 
-              parent="menu_transit_root" 
-              action="action_transit_vehicle"
-              sequence="20"/>
+    <!-- Dashboard -->
+    <menuitem
+        id="menu_transit_dashboard"
+        name="Dashboard"
+        parent="menu_transit_root"
+        sequence="10"/>
 
-    <menuitem id="menu_transit_driver_management" 
-              name="Driver Management" 
-              parent="menu_transit_root" 
-              action="action_transit_driver"
-              sequence="30"/>
+    <!-- Vehicle -->
+    <menuitem
+        id="menu_transit_vehicle"
+        name="Vehicle Management"
+        parent="menu_transit_root"
+        action="action_transit_vehicle"
+        sequence="20"/>
 
-    <menuitem id="menu_transit_trip_management" 
-              name="Trip Management" 
-              parent="menu_transit_root" 
-              sequence="40"/>
+    <!-- Driver -->
+    <menuitem
+        id="menu_transit_driver"
+        name="Driver Management"
+        parent="menu_transit_root"
+        action="action_transit_driver"
+        sequence="30"/>
+
+    <!-- Trip -->
+    <menuitem
+        id="menu_transit_trip"
+        name="Trip Management"
+        parent="menu_transit_root"
+        action="action_transit_trip"
+        sequence="40"/>
+
 </odoo>

@@ -19,8 +19,11 @@ This is the base custom module for the TransitOps system.
     'data': [
         'security/transit_ops_security.xml',
         'security/ir.model.access.csv',
+
         'views/transit_vehicle_views.xml',
         'views/transit_driver_views.xml',
+        'views/transit_trip_views.xml',
+
         'views/transit_menus.xml',
     ],
     'demo': [
