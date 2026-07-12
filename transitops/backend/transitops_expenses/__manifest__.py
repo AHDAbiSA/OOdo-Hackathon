@@ -1,14 +1,16 @@
 {
     'name': 'TransitOps Expenses',
-    'version': '17.0.1.0.0',
-    'category': 'Fleet',
-    'summary': 'Record operational expenses',
+    'version': '19.0.1.0.0',
+    'author': 'Ajeetha',
     'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv',
-        '../frontend/transitops_expenses/views/expense_views.xml',
-    ],
+    'security/ir.model.access.csv',
+    'views/expense_views.xml',
+    'views/transitops_menu.xml',
+],
     'installable': True,
     'application': True,
-    'license': 'LGPL-3',
 }
+
+
+

@@ -1,14 +1,17 @@
 {
     'name': 'TransitOps Reports',
-    'version': '17.0.1.0.0',
+    'version': '19.0.1.0.0',
+    'author': 'Ajeetha',
     'category': 'Fleet',
-    'summary': 'Fleet KPIs and analytics dashboard',
+    'summary': 'Generate analytical reports for TransitOps modules',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        '../frontend/transitops_reports/views/report_views.xml',
+        'views/transitops_menu.xml',
+        'views/report_views.xml',
     ],
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
 }
+

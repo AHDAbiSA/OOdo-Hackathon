@@ -1,14 +1,17 @@
 {
     'name': 'TransitOps Maintenance',
-    'version': '17.0.1.0.0',
+    'version': '19.0.1.0.0',
+    'author': 'Ajeetha',
     'category': 'Fleet',
-    'summary': 'Manage vehicle maintenance records',
+    'summary': 'Manage vehicle maintenance schedules and records',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        '../frontend/transitops_maintenance/views/maintenance_views.xml',
+        'views/transitops_menu.xml',
+        'views/maintenance_views.xml',
     ],
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
 }
+

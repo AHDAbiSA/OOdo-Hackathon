@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem id="transitops_root_menu"
+              name="TransitOps"
+              sequence="1"/>
+
+    <!-- Expenses Action -->
+    <record id="action_transitops_expenses" model="ir.actions.act_window">
+        <field name="name">Expenses</field>
+        <field name="res_model">transitops.expense</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Expenses Menu -->
+    <menuitem id="transitops_expenses_menu"
+              name="Expenses"
+              parent="transitops_root_menu"
+              action="action_transitops_expenses"/>
+
+</odoo>
