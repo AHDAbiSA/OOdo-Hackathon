@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- List View -->
+    <record id="transitops_maintenance_view_list" model="ir.ui.view">
+        <field name="name">transitops.maintenance.list</field>
+        <field name="model">transitops.maintenance</field>
+        <field name="arch" type="xml">
+            <list string="Maintenance Records">
+                <field name="vehicle_id"/>
+                <field name="description"/>
+                <field name="cost"/>
+                <field name="status"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="transitops_maintenance_view_form" model="ir.ui.view">
+        <field name="name">transitops.maintenance.form</field>
+        <field name="model">transitops.maintenance</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance Record">
+                <sheet>
+                    <group>
+                        <field name="vehicle_id"/>
+                        <field name="description"/>
+                        <field name="cost"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="transitops_maintenance_action" model="ir.actions.act_window">
+        <field name="name">Maintenance</field>
+        <field name="res_model">transitops.maintenance</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="transitops_menu_root"
+              name="TransitOps"
+              sequence="100"/>
+
+    <menuitem id="transitops_menu_maintenance"
+              name="Maintenance"
+              parent="transitops_menu_root"
+              action="transitops_maintenance_action"
+              sequence="10"/>
+
+</odoo>

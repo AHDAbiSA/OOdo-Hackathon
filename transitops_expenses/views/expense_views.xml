@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- List View -->
+    <record id="transitops_expense_view_list" model="ir.ui.view">
+        <field name="name">transitops.expense.list</field>
+        <field name="model">transitops.expense</field>
+        <field name="arch" type="xml">
+            <list string="Expenses">
+                <field name="vehicle_id"/>
+                <field name="expense_type"/>
+                <field name="amount"/>
+                <field name="date"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="transitops_expense_view_form" model="ir.ui.view">
+        <field name="name">transitops.expense.form</field>
+        <field name="model">transitops.expense</field>
+        <field name="arch" type="xml">
+            <form string="Expense">
+                <sheet>
+                    <group>
+                        <field name="vehicle_id"/>
+                        <field name="expense_type"/>
+                        <field name="amount"/>
+                        <field name="date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="transitops_expense_action" model="ir.actions.act_window">
+        <field name="name">Expenses</field>
+        <field name="res_model">transitops.expense</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="transitops_menu_expenses"
+              name="Expenses"
+              parent="transitops_maintenance.transitops_menu_root"
+              action="transitops_expense_action"
+              sequence="30"/>
+
+</odoo>

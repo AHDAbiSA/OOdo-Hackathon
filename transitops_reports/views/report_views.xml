@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- List View (placeholder) -->
+    <record id="transitops_report_view_list" model="ir.ui.view">
+        <field name="name">transitops.report.list</field>
+        <field name="model">transitops.report</field>
+        <field name="arch" type="xml">
+            <list string="Fleet KPIs">
+                <!-- TODO: Add KPI fields here -->
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View (placeholder) -->
+    <record id="transitops_report_view_form" model="ir.ui.view">
+        <field name="name">transitops.report.form</field>
+        <field name="model">transitops.report</field>
+        <field name="arch" type="xml">
+            <form string="Fleet KPI">
+                <sheet>
+                    <group>
+                        <!-- TODO: Add KPI fields here -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="transitops_report_action" model="ir.actions.act_window">
+        <field name="name">Reports</field>
+        <field name="res_model">transitops.report</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="transitops_menu_reports"
+              name="Reports"
+              parent="transitops_maintenance.transitops_menu_root"
+              action="transitops_report_action"
+              sequence="90"/>
+
+</odoo>
