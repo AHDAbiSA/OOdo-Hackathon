@@ -70,3 +70,30 @@ This project follows a clean Odoo development layout:
 - Maintain clean, pep8-compliant Python code.
 - Write XML views using clear, semantic Odoo syntax.
 - Ensure all business logic is fully tested under `tests/` directories within modules.
+
+---
+
+# Hour 2 Progress
+
+## ✅ Completed
+
+- Implemented Authentication module.
+- Created security groups:
+  - Fleet Manager
+  - Driver
+  - Safety Officer
+  - Financial Analyst
+- Configured role-based access control (RBAC).
+- Added `ir.model.access.csv`.
+- Created demo users.
+- Added TransitOps root menu.
+- Added placeholder menus:
+  - Dashboard
+  - Vehicle Management
+  - Driver Management
+  - Trip Management
+- Updated `__manifest__.py`.
+
+## Next Phase
+
+- Vehicle Management Module
