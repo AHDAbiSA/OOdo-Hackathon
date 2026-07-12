@@ -97,3 +97,23 @@ This project follows a clean Odoo development layout:
 ## Next Phase
 
 - Vehicle Management Module
+
+# Hour 3 Progress
+
+## ✅ Completed
+
+### Vehicle Management Module
+
+- Created `transit.vehicle` model.
+- Added vehicle registration number validation.
+- Implemented unique registration constraint.
+- Added Tree View.
+- Added Form View.
+- Added Search View.
+- Connected Vehicle Management menu.
+- Configured Fleet Manager CRUD permissions.
+- Updated module manifest.
+
+## Next Phase
+
+Driver Management Module

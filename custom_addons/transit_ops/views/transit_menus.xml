@@ -15,6 +15,7 @@
     <menuitem id="menu_transit_vehicle_management" 
               name="Vehicle Management" 
               parent="menu_transit_root" 
+              action="action_transit_vehicle"
               sequence="20"/>
 
     <menuitem id="menu_transit_driver_management" 
