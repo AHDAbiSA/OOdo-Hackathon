@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- List View -->
+    <record id="transitops_fuel_log_view_list" model="ir.ui.view">
+        <field name="name">transitops.fuel.log.list</field>
+        <field name="model">transitops.fuel.log</field>
+        <field name="arch" type="xml">
+            <list string="Fuel Logs">
+                <field name="vehicle_id"/>
+                <field name="liters"/>
+                <field name="cost"/>
+                <field name="date"/>
+                <field name="distance"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="transitops_fuel_log_view_form" model="ir.ui.view">
+        <field name="name">transitops.fuel.log.form</field>
+        <field name="model">transitops.fuel.log</field>
+        <field name="arch" type="xml">
+            <form string="Fuel Log">
+                <sheet>
+                    <group>
+                        <field name="vehicle_id"/>
+                        <field name="liters"/>
+                        <field name="cost"/>
+                        <field name="date"/>
+                        <field name="distance"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="transitops_fuel_log_action" model="ir.actions.act_window">
+        <field name="name">Fuel Logs</field>
+        <field name="res_model">transitops.fuel.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="transitops_menu_fuel"
+              name="Fuel Logs"
+              parent="transitops_maintenance.transitops_menu_root"
+              action="transitops_fuel_log_action"
+              sequence="20"/>
+
+</odoo>
